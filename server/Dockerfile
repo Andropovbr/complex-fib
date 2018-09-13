@@ -1,6 +1,7 @@
 FROM node:alpine
-WORKDIR '/usr/app'
+CMD ["mkdir", "/app"]
+WORKDIR '/app'
 COPY ./package.json ./
 RUN npm install
 COPY ./ ./
-CMD ["npm", "run", "dev"]
+CMD ["npm", "run", "start"]
